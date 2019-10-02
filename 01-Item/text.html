@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>text</title>
-      <style>
+    <title>Document</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-          
-            body {
-            background: url("./image/bg1.jpg") no-repeat 0 0 / 100%;
+
+        body {
+            background: url("./image/bg1.jpg") no-repeat 0 0/100%;
+            color: #ffffff;
+            position: relative;
+        }
+
+        @keyframes donghua {
+            from {
+                text-align: left;
+                color: #ffffff;
+            }
+
+            to {
+                text-align: right;
+                color: black;
+            }
+
+        }
+
+        @keyframes move {
+            from {
+                top: 0;
+            }
+
+            to {
+                top: 500px;
+            }
+
         }
 
         h1,
         p {
-            text-align: center;
-            padding: 10px;
-            color:#ffffff;
+            animation: donghua 4s infinite;
         }
-          
+
+        .move {
+            padding: 0 50px;
+            width: 100%;
+            position: absolute;
+            animation: move 7s infinite;
+        }
     </style>
 </head>
+
 <body>
-  <h1>黯淡丶</h1>
-  <P>大家好，初来驾到请多多指教！</P>
+    <div class="move">
+        <h1>黯淡丶</h1>
+        <p>大家好，初来驾到请多多指教！</p>
+    </div>
 </body>
+
 </html>
